@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="574.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hopital.controllers.PatientControlleur">
+   <children>
+      <Label layoutX="29.0" layoutY="24.0" text="Nom ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomTfd" layoutX="28.0" layoutY="66.0" prefHeight="42.0" prefWidth="369.0" />
+      <Label layoutX="28.0" layoutY="130.0" text="PRENOM">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prenomTfd" layoutX="28.0" layoutY="172.0" prefHeight="42.0" prefWidth="369.0" />
+      <Label layoutX="28.0" layoutY="224.0" text="Nom Dossier">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomDossierTfd" layoutX="28.0" layoutY="266.0" prefHeight="42.0" prefWidth="369.0" />
+      <Label layoutX="28.0" layoutY="328.0" text="Num Telephone">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="telTfd" layoutX="28.0" layoutY="370.0" prefHeight="42.0" prefWidth="369.0" />
+      <TableView fx:id="patientTbl" layoutX="414.0" layoutY="22.0" onMouseClicked="#getData" prefHeight="465.0" prefWidth="562.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="43.0" text="ID" />
+            <TableColumn fx:id="nomCol" prefWidth="112.0" text="NOM" />
+            <TableColumn fx:id="prenomCol" prefWidth="121.0" text="PRENOM" />
+            <TableColumn fx:id="nomDossierCol" prefWidth="141.0" text="Nom Dossier" />
+            <TableColumn fx:id="telCol" prefWidth="144.0" text="Telephone " />
+         </columns>
+      </TableView>
+      <Button fx:id="ajouterBtn" layoutX="135.0" layoutY="516.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="175.0" text="Ajouter" />
+      <Button fx:id="modifierBtn" layoutX="320.0" layoutY="516.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="166.0" text="Modifier" />
+      <Button fx:id="supprimerBtn" layoutX="497.0" layoutY="516.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="166.0" text="Supprimer" />
+   </children>
+</AnchorPane>
